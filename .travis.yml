@@ -1,4 +1,5 @@
 os: linux
+dist: xenial
 language: generic
 
 services:
@@ -7,5 +8,5 @@ services:
 after_success:
   - docker build -t "filipdadgar/static-web" .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push "filipdadgar/static-web"
+  - docker push "filipdadgar/static-web:latest"
   - echo "done pushing!"
