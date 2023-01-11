@@ -1,0 +1,11 @@
+os: linux
+language: generic
+
+services:
+  - docker
+
+after_success:
+  - docker build -t "filipdadgar/static-web" .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push "filipdadgar/static-web"
+  - echo "done pushing!"
