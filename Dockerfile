@@ -1,6 +1,3 @@
-# Create a dockerfile that starts a webserver 
-# that displays the files Static-index.html and LI-ln-Bug.PNG
-# in the directory /var/www/html
 
 # Use the latest version of Ubuntu
 FROM ubuntu:latest
@@ -18,8 +15,5 @@ ADD files/* /var/www/html
 EXPOSE 80
 EXPOSE 8888
 
-
-# Set the default command to execute
-# when creating a new container
 CMD ["apache2ctl", "-D","FOREGROUND"]
 
