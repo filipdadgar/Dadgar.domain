@@ -15,7 +15,7 @@ WORKDIR /var/www/html
 ADD files/* /var/www/html
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 8888
 
 
 # Set the default command to execute
