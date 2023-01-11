@@ -14,7 +14,7 @@ WORKDIR /var/www/html
 # Copy the files to the webserver
 ADD files/* /var/www/html
 
-# Expose port 80
+# Expose port 8888
 EXPOSE 8888
 
 
