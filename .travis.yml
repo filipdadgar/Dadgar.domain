@@ -7,9 +7,12 @@ language: generic
 services:
   - docker
 
+
+script:
+  - docker ps -a
+
 after_success:
-  - docker build -t "filipdadgar/staticweb" .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker tag "filipdadgar/staticweb" "filipdadgar/staticweb:latest"
+  - docker build -t "filipdadgar/staticweb" .
   - docker push "filipdadgar/staticweb:latest"
   - echo "done pushing!"
