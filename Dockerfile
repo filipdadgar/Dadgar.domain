@@ -14,7 +14,7 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 
 # Copy the files to the webserver
-ADD files/* /var/www/html
+ADD files/* /var/www/html/
 
 # Expose port 80 and 8888
 EXPOSE 80
