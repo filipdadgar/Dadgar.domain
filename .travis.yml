@@ -6,7 +6,8 @@ services:
   - docker
 
 after_success:
-  - docker build -t "filipdadgar/staticweb:latest" .
+  - docker build -t "filipdadgar/staticweb" .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker tag "filipdadgar/staticweb:latest"
   - docker push "filipdadgar/staticweb:latest"
   - echo "done pushing!"
