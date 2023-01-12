@@ -3,7 +3,8 @@
 FROM ubuntu:latest
 
 # Update the repository sources list
-RUN apt-get update -y && apt-get upgrade -y && apt-get install -y apache2 apache2-utils
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y apache2 
+#apache2-utils
 
 WORKDIR /var/www/html
 
