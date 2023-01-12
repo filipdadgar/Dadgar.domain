@@ -1,5 +1,4 @@
-sudo: required
-
+# Description: Travis CI configuration file for the staticweb project
 os: linux
 dist: xenial
 language: generic
@@ -14,5 +13,4 @@ script:
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker build -t "filipdadgar/staticweb" .
-  - docker push "filipdadgar/staticweb:latest"
-  - echo "done pushing!"
+  - docker push "filipdadgar/staticweb"
