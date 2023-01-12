@@ -1,6 +1,6 @@
 
 # Use the latest version of Ubuntu
-FROM ubuntu:latest
+FROM ubuntu:18.04
 
 # Update the repository sources list
 #RUN apt-get update -y && apt-get upgrade -y && apt-get install -y apache2 apache2-utils
