@@ -16,7 +16,7 @@ jobs:
       with:
         source_file: 'files/'
         destination_repo: 'filipdadgar/filipdadgar.github.io'
-        destination_folder: ''
+        destination_folder: '/docs'
         user_email: 'filip@dadgar.se'
         user_name: 'filipdadgar'
         commit_message: 'pushed the new landing page'
